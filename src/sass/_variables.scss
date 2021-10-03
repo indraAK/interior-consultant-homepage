@@ -1,0 +1,20 @@
+$bg-color: #181719;
+$white-color: #ffffff;
+$gray-color: #828282;
+
+$font-primary: "Montserrat", sans-serif;
+$font-secondary: "Lora", serif;
+
+$font-weights: (
+  "extralight": 200,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+);
+
+$breakpoints: (
+  "sm": "576px",
+  "md": "768px",
+  "lg": "992px",
+  "xl": "1200px",
+);

@@ -1,0 +1,7 @@
+@use "./variables" as *;
+
+@mixin breakpoint($bp) {
+  @media screen and (min-width: map-get($breakpoints, $bp)) {
+    @content;
+  }
+}

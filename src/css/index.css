@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background: #181719;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.container {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-link {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+}
+.nav-link.active {
+  font-weight: 700;
+  border-color: #ffffff;
+}
+.nav-link:hover {
+  border-color: #ffffff;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+header {
+  min-height: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.nav-logo {
+  font-family: "Crimson Pro", serif;
+  font-size: 1.4rem;
+  border: 1px solid #ffffff;
+  padding: 0.5rem 1.5rem;
+}
+.nav-list {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.nav-item {
+  margin-left: 5rem;
+}
+.nav-menu {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  min-height: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 2rem;
+  z-index: 1001;
+}
+@media screen and (min-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+}
+.nav-menu .line {
+  display: block;
+  width: 2.7rem;
+  height: 2px;
+  background-color: #ffffff;
+  position: relative;
+  transition: 0.4s ease;
+}
+.nav-menu .line::before, .nav-menu .line::after {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  transition: 0.4s ease;
+}
+.nav-menu .line::before {
+  top: -0.9rem;
+}
+.nav-menu .line::after {
+  top: 0.9rem;
+}
+.nav-menu.active .line {
+  background-color: transparent;
+  transform: rotate(180deg);
+}
+.nav-menu.active .line::before, .nav-menu.active .line::after {
+  top: 0;
+}
+.nav-menu.active .line::before {
+  transform: rotate(135deg);
+}
+.nav-menu.active .line::after {
+  transform: rotate(-135deg);
+}
+
+.welcome {
+  margin-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .welcome {
+    min-height: calc(100vh - 20rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 3rem;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .welcome-text {
+    flex: 1 1 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .welcome-text-inner {
+    width: 100%;
+    max-width: 37rem;
+  }
+}
+.welcome-title {
+  font-family: "Lora", serif;
+  font-size: 3.6rem;
+}
+.welcome-lead {
+  margin: 2.5rem 0;
+  font-size: 1.4rem;
+}
+.welcome-cta {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+.welcome-cta .bx {
+  font-size: 2rem;
+  margin-left: 1rem;
+  color: #ffffff;
+}
+.welcome-media {
+  margin-top: 3rem;
+  aspect-ratio: 16/12;
+  position: relative;
+  margin-bottom: 10rem;
+}
+@media screen and (min-width: 768px) {
+  .welcome-media {
+    flex: 1 1 50%;
+    margin-bottom: 0;
+  }
+}
+.welcome-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.welcome .user {
+  background-color: #181719;
+  padding: 2.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  margin: 0 auto;
+  transform: translateY(50%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.welcome .user-info {
+  display: flex;
+  align-items: center;
+}
+.welcome .user-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  margin-right: 1.5rem;
+}
+.welcome .user-name {
+  font-size: 1.2rem;
+}
+.welcome .user-job {
+  font-size: 1rem;
+  color: #828282;
+}
+.welcome .user-capt {
+  font-family: "Lora", serif;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .welcome .user-capt {
+    font-size: 1.8rem;
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #181719;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateX(200%);
+  transition: transform 0.4s ease;
+}
+.mobile-nav.open {
+  transform: translateX(0);
+}
+.mobile-nav-item {
+  margin: 2.4rem 0;
+}

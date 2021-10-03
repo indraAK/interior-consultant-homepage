@@ -1,0 +1,58 @@
+@use "./variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  background: $bg-color;
+  color: $white-color;
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.container {
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-link {
+  display: inline-block;
+  color: $white-color;
+  font-size: 1.5rem;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+
+  &.active {
+    font-weight: 700;
+    border-color: $white-color;
+  }
+
+  &:hover {
+    border-color: $white-color;
+  }
+}
